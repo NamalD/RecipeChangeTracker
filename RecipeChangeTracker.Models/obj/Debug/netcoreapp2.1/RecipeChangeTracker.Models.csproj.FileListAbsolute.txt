@@ -1,9 +1,0 @@
-C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models\bin\Debug\netcoreapp2.1\RecipeChangeTracker.Models.deps.json
-C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models\bin\Debug\netcoreapp2.1\RecipeChangeTracker.Models.dll
-C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models\bin\Debug\netcoreapp2.1\RecipeChangeTracker.Models.pdb
-C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.csprojAssemblyReference.cache
-C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.AssemblyInfoInputs.cache
-C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.AssemblyInfo.cs
-C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.dll
-C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.pdb
-C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.csproj.CoreCompileInputs.cache
