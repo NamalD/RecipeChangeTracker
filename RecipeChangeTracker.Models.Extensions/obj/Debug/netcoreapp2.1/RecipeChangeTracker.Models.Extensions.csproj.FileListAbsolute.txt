@@ -1,0 +1,12 @@
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\bin\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.deps.json
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\bin\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\bin\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.pdb
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\bin\Debug\netcoreapp2.1\RecipeChangeTracker.Models.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\bin\Debug\netcoreapp2.1\RecipeChangeTracker.Models.pdb
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.csprojAssemblyReference.cache
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.csproj.CoreCompileInputs.cache
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.AssemblyInfoInputs.cache
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.AssemblyInfo.cs
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.csproj.CopyComplete
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.Models.Extensions\obj\Debug\netcoreapp2.1\RecipeChangeTracker.Models.Extensions.pdb

@@ -1,0 +1,12 @@
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\bin\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.deps.json
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\bin\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\bin\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.pdb
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.csprojAssemblyReference.cache
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.AssemblyInfoInputs.cache
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.AssemblyInfo.cs
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.csproj.CoreCompileInputs.cache
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.pdb
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\bin\Debug\netcoreapp3.1\RecipeChangeTracker.Models.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\bin\Debug\netcoreapp3.1\RecipeChangeTracker.Models.pdb
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.Core\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.csproj.CopyComplete

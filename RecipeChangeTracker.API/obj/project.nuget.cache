@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "i6kZRJJA/78pV0jBHk1XVsXtFfFsqm24oCKs0ZduuPL7t+gG9ILQRc1flxKRWDpnmzPEHWKOyhV08U2YIViDzw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\namal\\source\\repos\\RecipeChangeTracker\\RecipeChangeTracker.API\\RecipeChangeTracker.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\namal\\.nuget\\packages\\carter\\5.1.0\\carter.5.1.0.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\fluentvalidation\\8.5.1\\fluentvalidation.8.5.1.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\microsoft.extensions.dependencymodel\\3.1.0\\microsoft.extensions.dependencymodel.3.1.0.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\microsoft.openapi\\1.1.4\\microsoft.openapi.1.1.4.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\swashbuckle.aspnetcore\\5.5.1\\swashbuckle.aspnetcore.5.5.1.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.5.1\\swashbuckle.aspnetcore.swagger.5.5.1.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.5.1\\swashbuckle.aspnetcore.swaggergen.5.5.1.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.5.1\\swashbuckle.aspnetcore.swaggerui.5.5.1.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\system.componentmodel.annotations\\4.4.1\\system.componentmodel.annotations.4.4.1.nupkg.sha512",
+    "C:\\Users\\namal\\.nuget\\packages\\system.text.json\\4.7.0\\system.text.json.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

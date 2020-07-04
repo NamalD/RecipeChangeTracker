@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>RecipeChangeTracker.API</AssemblyName>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Carter" Version="5.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RecipeChangeTracker.Models\RecipeChangeTracker.Models.csproj" />
+    <ProjectReference Include="..\RecipeChangeTracker.RecipeStore.Core\RecipeChangeTracker.RecipeStore.Core.csproj" />
+    <ProjectReference Include="..\RecipeChangeTracker.RecipeStore.InMemory\RecipeChangeTracker.RecipeStore.InMemory.csproj" />
+  </ItemGroup>
+</Project>

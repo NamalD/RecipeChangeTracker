@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4zbfaMpFYRRGrGaw0wueyIeQr0bTKi6UWUxjR4tmrSfA6YXfNHbv0X70e+CaRKNhRYZjQjfI8KUIwG/qRxrl7w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\namal\\source\\repos\\RecipeChangeTracker\\RecipeChangeTracker.RecipeStore.InMemory\\RecipeChangeTracker.RecipeStore.InMemory.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\namal\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

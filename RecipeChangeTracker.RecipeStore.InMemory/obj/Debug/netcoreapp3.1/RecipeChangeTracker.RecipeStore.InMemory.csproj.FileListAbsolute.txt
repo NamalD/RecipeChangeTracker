@@ -1,0 +1,16 @@
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\bin\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.deps.json
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\bin\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\bin\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.pdb
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\bin\Debug\netcoreapp3.1\RecipeChangeTracker.Models.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\bin\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\bin\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.Core.pdb
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\bin\Debug\netcoreapp3.1\RecipeChangeTracker.Models.pdb
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.csprojAssemblyReference.cache
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.AssemblyInfoInputs.cache
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.AssemblyInfo.cs
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.csproj.CoreCompileInputs.cache
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.csproj.CopyComplete
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\obj\Debug\netcoreapp3.1\RecipeChangeTracker.RecipeStore.InMemory.pdb
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\bin\Debug\netcoreapp3.1\RecipeChangeTracker.Tree.dll
+C:\Users\namal\source\repos\RecipeChangeTracker\RecipeChangeTracker.RecipeStore.InMemory\bin\Debug\netcoreapp3.1\RecipeChangeTracker.Tree.pdb
