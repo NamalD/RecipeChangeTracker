@@ -81,7 +81,7 @@ module RecipeStore =
         let updatedRecipes = 
             match store.Recipes with
             | None -> Some [ recipeTree ]
-            | Some rt -> Some (recipeTree :: rt)
+            | Some existingRecipes -> Some (recipeTree :: existingRecipes)
 
         { store with Recipes = updatedRecipes }
 
