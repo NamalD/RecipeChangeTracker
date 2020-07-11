@@ -1,5 +1,6 @@
 using FluentAssertions;
 using NUnit.Framework;
+using RecipeChangeTracker.CSharp.Models;
 using RecipeChangeTracker.Models;
 using RecipeChangeTracker.Tree;
 using System;

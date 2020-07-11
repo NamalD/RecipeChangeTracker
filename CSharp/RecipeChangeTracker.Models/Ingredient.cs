@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace RecipeChangeTracker.Models
+namespace RecipeChangeTracker.CSharp.Models
 {
     public class Ingredient
     {

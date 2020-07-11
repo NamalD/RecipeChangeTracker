@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RecipeChangeTracker.Models
+namespace RecipeChangeTracker.CSharp.Models
 {
     public class Recipe
     {

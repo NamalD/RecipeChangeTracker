@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecipeChangeTracker.CSharp.Models;
+using System;
 using System.Collections.Generic;
 
 namespace RecipeChangeTracker.Models

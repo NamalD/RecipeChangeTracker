@@ -3,7 +3,7 @@ using Carter.ModelBinding;
 using Carter.Response;
 using Microsoft.AspNetCore.Http;
 using RecipeChangeTracker.API.Metadata;
-using RecipeChangeTracker.Models;
+using RecipeChangeTracker.CSharp.Models;
 using RecipeChangeTracker.RecipeStore.Core;
 
 namespace RecipeChangeTracker.API.Modules

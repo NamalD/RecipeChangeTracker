@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RecipeChangeTracker.Models\RecipeChangeTracker.Models.csproj" />
+    <ProjectReference Include="..\RecipeChangeTracker.Models\RecipeChangeTracker.CSharp.Models.csproj" />
   </ItemGroup>
 
 </Project>

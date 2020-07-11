@@ -1,5 +1,5 @@
 ﻿using Carter.OpenApi;
-using RecipeChangeTracker.Models;
+using RecipeChangeTracker.CSharp.Models;
 using System.Collections.Generic;
 
 namespace RecipeChangeTracker.API.Metadata
