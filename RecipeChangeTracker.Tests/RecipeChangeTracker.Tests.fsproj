@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="RecipeTree.fs" />
+    <Compile Include="RecipeList.fs" />
     <Compile Include="RecipeStore.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

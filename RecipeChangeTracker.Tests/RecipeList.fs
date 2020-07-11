@@ -14,50 +14,51 @@ type Latest () =
 
     [<Test>]
     member this. ``Latest returns None when tree is empty``() =
-        let tree = RecipeTree.create None
+        let tree = RecipeList.create None
 
-        let latest = RecipeTree.latest tree
+        let latest = RecipeList.latest tree
 
         Assert.That(latest, Is.EqualTo(None))
 
     [<Test>]
     member this.``Latest returns only node when tree has one node`` () =
-        let tree = RecipeTree.create (Some testRecipe)
+        let tree = RecipeList.create (Some testRecipe)
 
-        let latest = RecipeTree.latest tree
+        let latest = RecipeList.latest tree
 
         Assert.That(latest, Is.EqualTo(Some testRecipe))
 
     [<Test>]
     member this.``Latest returns latest node when node has history`` () =
-        let tree = RecipeTree.create (Some testRecipe)
-        let updatedTree = RecipeTree.update tree updatedRecipe
+        let tree = RecipeList.create (Some testRecipe)
+        let updatedTree = RecipeList.update tree updatedRecipe
 
-        let latest = RecipeTree.latest updatedTree
+        let latest = RecipeList.latest updatedTree
 
         Assert.That(latest, Is.EqualTo(Some updatedRecipe))
 
 [<TestFixture>]
 type Update () =
    
-    let emptyTree = RecipeTree.create None
-    let updatedEmptyTree = RecipeTree.update emptyTree testRecipe
+    let emptyTree = RecipeList.create None
+    let updatedEmptyTree = RecipeList.update emptyTree testRecipe
 
-    let existingTree = RecipeTree.create (Some testRecipe)
-    let updatedExistingTree = RecipeTree.update existingTree updatedRecipe
+    let existingTree = RecipeList.create (Some testRecipe)
+    let existingNode = existingTree.Head;
+    let updatedExistingTree = RecipeList.update existingTree updatedRecipe
 
     [<Test>]
     member this.``Update empty tree sets Head to recipe`` () =
         Assert.That(updatedEmptyTree.Head.Recipe, Is.EqualTo(Some testRecipe))
 
     [<Test>]
-    member this.``Update empty tree leaves PreviousState as None`` () =
-        Assert.That(updatedEmptyTree.Head.PreviousState, Is.EqualTo(None))
+    member this.``Update empty tree leaves PreviousId as None`` () =
+        Assert.That(updatedEmptyTree.Head.PreviousId, Is.EqualTo(None))
 
     [<Test>]
     member this.``Update existing recipe sets Head to new recipe state`` () =
         Assert.That(updatedExistingTree.Head.Recipe, Is.EqualTo(Some updatedRecipe))
 
     [<Test>]
-    member this.``Update existing recipe sets PreviousState to old recipe`` () =
-        Assert.That(updatedExistingTree.Head.PreviousState.Value.Recipe, Is.EqualTo(Some testRecipe))
+    member this.``Update existing recipe sets PreviousId to old recipe`` () =
+        Assert.That(updatedExistingTree.Head.PreviousId, Is.EqualTo(Some existingNode.Id))

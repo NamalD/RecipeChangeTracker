@@ -19,6 +19,6 @@ type RecipeStore () =
         let expectedRecipeTree = Some newRecipe
 
         let updatedRecipeStore = RecipeStore.addRecipe store newRecipe
-        let latestRecipe = RecipeTree.latest updatedRecipeStore.Recipes.Value.Head
+        let latestRecipe = RecipeList.latest updatedRecipeStore.Recipes.Value.Head
 
         Assert.That(latestRecipe, Is.EqualTo(expectedRecipeTree));

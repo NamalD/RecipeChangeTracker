@@ -40,43 +40,43 @@ module Recipe =
     let create name ingredients steps cooktime =
         { Name = name; Ingredients = ingredients; Steps = steps; CookTime = cooktime }
 
-module RecipeTree =
+module RecipeList =
     
     type Node = {
         Recipe: Recipe.T Option
-        PreviousState: Node Option
+        Id: Guid
+        PreviousId: Guid Option
     }
 
-    type T = {
-        Head: Node
-    }
+    type T = Node list
 
     let create recipe =
-        { Head = { Recipe = recipe; PreviousState = None } }
+        [{ Recipe = recipe; Id = Guid.NewGuid(); PreviousId = None }]
 
-    let latest tree =
+    let latest (tree:T) =
         tree.Head.Recipe
 
-    let update tree newRecipe =
-        let newHistory =
-            match tree.Head.Recipe with
-            | None -> None
-            | Some _ -> Some tree.Head 
+    let getHeadId (tree:T) = 
+        match tree.Head.Recipe with
+        | None -> None
+        | Some _ -> Some tree.Head.Id
 
-        let newHead = { Recipe = Some newRecipe; PreviousState = newHistory }
-        { Head = newHead }
+    let update (tree:T) newRecipe =
+        let previousId = getHeadId tree
+        let newHead = { Recipe = Some newRecipe; Id = Guid.NewGuid(); PreviousId = previousId }
+        newHead :: tree
 
 module RecipeStore =
 
     type T = {
-        Recipes: RecipeTree.T list Option
+        Recipes: RecipeList.T list Option
     }
 
     let create recipes =
         { Recipes = recipes }
 
     let addRecipe store recipe =
-        let recipeTree = RecipeTree.create (Some recipe)
+        let recipeTree = RecipeList.create (Some recipe)
 
         let updatedRecipes = 
             match store.Recipes with
