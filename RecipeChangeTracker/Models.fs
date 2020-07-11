@@ -85,12 +85,3 @@ module RecipeStore =
 
         { store with Recipes = updatedRecipes }
 
-    // Delete recipe
-
-    // Update recipe
-
-    // Get latest recipe
-
-    // Get historical recipe
-
-    // Undo/redo to state 
