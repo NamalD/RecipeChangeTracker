@@ -3,7 +3,7 @@
 open NUnit.Framework
 open RecipeChangeTracker
 
-let ingredients = [ Ingredient.WithoutUnit { Quantity = Ingredient.Quantity.Integer(1); Name = "pineapple" } ]
+let ingredients = [ Ingredient.Unitless { Quantity = Ingredient.Quantity.Integer(1); Name = "pineapple" } ]
 let steps = [ "Peel"; "Eat" ]
 let timeToCook = System.TimeSpan.FromMinutes 20.0
 let testRecipe = Recipe.create "Test Recipe" ingredients steps timeToCook

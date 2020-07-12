@@ -26,7 +26,7 @@ module Ingredient =
     
     type T =
         | WithUnit of Ingredient: BasicIngredient * Quantity: string 
-        | WithoutUnit of Ingredient: BasicIngredient 
+        | Unitless of Ingredient: BasicIngredient 
 
 module Recipe =
     
@@ -69,10 +69,19 @@ module RecipeList =
         | None -> None
         | Some _ -> Some tree.Head.Id
 
+    let getRecipeName (tree:T) =
+        match tree.Head.Recipe with
+        | None -> None
+        | Some recipe -> Some recipe.Name
+
     let update (tree:T) newRecipe =
         let previousId = getHeadId tree
         let newHead = { Recipe = Some newRecipe; Id = Guid.NewGuid(); PreviousId = previousId }
         newHead :: tree
+
+    let matchesName name list =
+        let recipeName = getRecipeName list
+        recipeName = Some name
 
 module RecipeStore =
 
@@ -83,7 +92,11 @@ module RecipeStore =
     let create recipes =
         { Recipes = recipes }
 
-    let addRecipe store recipe =
+    let createFromRecipe recipe =
+        let recipeList = RecipeList.create (Some recipe)
+        { Recipes = Some [ recipeList ] }
+
+    let addRecipe recipe store =
         let recipeTree = RecipeList.create (Some recipe)
 
         let updatedRecipes = 
@@ -93,3 +106,18 @@ module RecipeStore =
 
         { store with Recipes = updatedRecipes }
 
+    let getLatestRecipes store =
+        match store.Recipes with
+        | None -> []
+        | Some recipes -> List.map RecipeList.latest recipes
+    
+    let excludingRecipe recipeToExclude recipes =
+        List.where (RecipeList.matchesName recipeToExclude >> not) recipes
+
+    let deleteRecipe store recipeToDelete =
+        let recipesWithoutDeleted = 
+            match store.Recipes with
+            | None -> None
+            | Some recipes -> Some (excludingRecipe recipeToDelete recipes)
+
+        { store with Recipes = recipesWithoutDeleted }
