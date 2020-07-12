@@ -62,3 +62,24 @@ type Update () =
     [<Test>]
     member this.``Update existing recipe sets PreviousId to old recipe`` () =
         Assert.That(updatedExistingTree.Head.PreviousId, Is.EqualTo(Some existingNode.Id))
+
+[<TestFixture>]
+type GetPreviousNode () =
+
+    [<Test>]
+    member this.``Get previous when previous is none`` () =
+        let tree = RecipeList.create (Some testRecipe)
+
+        let previous = RecipeList.getPreviousNode tree tree.Head
+
+        Assert.That(previous, Is.EqualTo(None))
+    
+    [<Test>]
+    member this.``Get previous when previous exists`` () =
+        let tree = RecipeList.create (Some testRecipe)
+        let expectedNode = tree.Head
+        let updatedTree = RecipeList.update tree updatedRecipe
+
+        let previous = RecipeList.getPreviousNode updatedTree updatedTree.Head
+
+        Assert.That(previous, Is.EqualTo(Some expectedNode))

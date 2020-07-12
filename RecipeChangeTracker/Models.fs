@@ -56,6 +56,14 @@ module RecipeList =
     let latest (tree:T) =
         tree.Head.Recipe
 
+    let getNodeWithId tree id =
+        List.tryPick (fun node -> if node.Id = id then Some node else None) tree
+
+    let getPreviousNode tree node =
+        match node.PreviousId with
+        | None -> None
+        | Some previousId -> getNodeWithId tree previousId
+
     let getHeadId (tree:T) = 
         match tree.Head.Recipe with
         | None -> None
