@@ -1,11 +1,12 @@
 module RecipeChangeTracker.Tests.RecipeStoreTests
 
 open NUnit.Framework
-open RecipeChangeTracker
+open RecipeChangeTracker.Types
+open RecipeChangeTracker.Functions
 
 let ingredients =
     [ Ingredient.Unitless
-        { Quantity = Ingredient.Quantity.Integer(1)
+        { Quantity = Quantity.Integer(1)
           Name = "pineapple" } ]
 
 let steps = [ "Peel"; "Eat" ]
@@ -24,7 +25,7 @@ type AddRecipe() =
         let updatedRecipeStore = RecipeStore.addRecipe testRecipe store
 
         let latestRecipe =
-            RecipeList.latest updatedRecipeStore.Recipes.Head
+            TrackedRecipeList.latest updatedRecipeStore.Recipes.Head
 
         Assert.That(latestRecipe, Is.EqualTo(testRecipe))
 

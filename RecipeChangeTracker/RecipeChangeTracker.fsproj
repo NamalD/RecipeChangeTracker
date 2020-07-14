@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Models.fs" />
+    <Compile Include="Types.fs" />
+    <Compile Include="Functions\TrackedRecipeList.fs" />
+    <Compile Include="Functions\Recipe.fs" />
+    <Compile Include="Functions\RecipeStore.fs" />
   </ItemGroup>
 
 </Project>
