@@ -21,14 +21,12 @@ type AddRecipe() =
     member this.``Add Recipe Updates Stored Recipes``() =
         let store = RecipeStore.create []
 
-        let expectedRecipeTree = Some testRecipe
-
         let updatedRecipeStore = RecipeStore.addRecipe testRecipe store
 
         let latestRecipe =
             RecipeList.latest updatedRecipeStore.Recipes.Head
 
-        Assert.That(latestRecipe, Is.EqualTo(expectedRecipeTree))
+        Assert.That(latestRecipe, Is.EqualTo(testRecipe))
 
 [<TestFixture>]
 type DeleteRecipe() =
@@ -55,7 +53,7 @@ type DeleteRecipe() =
             { testRecipe with
                   Name = "Another Recipe" }
 
-        let expectedRecipes = [ Some expectedRecipe ]
+        let expectedRecipes = [ expectedRecipe ]
 
         let store =
             RecipeStore.create []

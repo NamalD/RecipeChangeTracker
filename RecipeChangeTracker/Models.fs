@@ -1,4 +1,4 @@
-﻿namespace RecipeChangeTracker
+namespace RecipeChangeTracker
 
 open System
 
@@ -31,7 +31,7 @@ module Recipe =
 module RecipeList =
 
     type Node =
-        { Recipe: Recipe.T Option
+        { Recipe: Recipe.T
           Id: Guid
           PreviousId: Guid Option }
 
@@ -52,29 +52,29 @@ module RecipeList =
         | None -> None
         | Some previousId -> getNodeWithId tree previousId
 
-    let getHeadId (tree: T) =
-        match tree.Head.Recipe with
-        | None -> None
-        | Some _ -> Some tree.Head.Id
+    let rec getVersion node list =
+        match getPreviousNode list node with
+        | None -> 1
+        | Some previous -> 1 + (getVersion previous list)
 
-    let getRecipeName (tree: T) =
-        match tree.Head.Recipe with
-        | None -> None
-        | Some recipe -> Some recipe.Name
-
-    let update (tree: T) newRecipe =
-        let previousId = getHeadId tree
+    let private addToList recipe (list:T) =
+        let previousId = Some list.Head.Id
 
         let newHead =
-            { Recipe = Some newRecipe
+            { Recipe = recipe
               Id = Guid.NewGuid()
               PreviousId = previousId }
 
-        newHead :: tree
+        newHead :: list
+
+    let update newRecipe (list: T) =
+        match list.IsEmpty with
+        | true -> create newRecipe
+        | false -> addToList newRecipe list
 
     let matchesName name list =
-        let recipeName = getRecipeName list
-        recipeName = Some name
+        let recipeName = (latest list).Name
+        recipeName = name
 
 module RecipeStore =
 
@@ -83,11 +83,11 @@ module RecipeStore =
     let create recipes = { Recipes = recipes }
 
     let createFromRecipe recipe =
-        let recipeList = RecipeList.create (Some recipe)
+        let recipeList = RecipeList.create recipe
         { Recipes = [ recipeList ] }
 
     let addRecipe recipe store =
-        let recipeTree = RecipeList.create (Some recipe)
+        let recipeTree = RecipeList.create recipe
 
         let updatedRecipes = recipeTree :: store.Recipes
 
