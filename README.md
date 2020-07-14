@@ -1,6 +1,9 @@
 # RecipeChangeTracker
 
+![.NET Core](https://github.com/NamalD/RecipeChangeTracker/workflows/.NET%20Core/badge.svg)
+
 Source control for recipes using an immutable graph inspired by Git.
+
 
 ## Stack
 
