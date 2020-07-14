@@ -2,7 +2,6 @@ namespace RecipeChangeTracker.Types
 
 open System
 
-
 type Quantity =
     | Integer of int
     | Float of float

@@ -25,8 +25,11 @@ module TrackedRecipeList =
         | None -> 1
         | Some previous -> 1 + (getVersion previous list)
 
-    let private addToList recipe (list:TrackedRecipeList) =
-        let previousId = Some list.Head.Id
+    let addToList recipe (list:TrackedRecipeList) =
+        let previousId =
+            match list with
+            | [] -> None
+            | _ -> Some list.Head.Id
 
         let newHead =
             { Recipe = recipe
@@ -39,7 +42,3 @@ module TrackedRecipeList =
         match list.IsEmpty with
         | true -> create newRecipe
         | false -> addToList newRecipe list
-
-    let matchesName name list =
-        let recipeName = (latest list).Name
-        recipeName = name
