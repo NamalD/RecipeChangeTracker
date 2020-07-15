@@ -22,9 +22,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeChangeTracker.Tree", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{5909E26F-9039-4F7F-8BA9-D93AAE451208}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecipeChangeTracker", "RecipeChangeTracker\RecipeChangeTracker.fsproj", "{E83F23C0-74D2-43AF-B56F-EA8F1D6CCD13}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker", "RecipeChangeTracker\RecipeChangeTracker.fsproj", "{E83F23C0-74D2-43AF-B56F-EA8F1D6CCD13}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecipeChangeTracker.Tests", "RecipeChangeTracker.Tests\RecipeChangeTracker.Tests.fsproj", "{E84D7F11-7EED-4E70-9D8D-6C700FA65FC9}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.Tests", "RecipeChangeTracker.Tests\RecipeChangeTracker.Tests.fsproj", "{E84D7F11-7EED-4E70-9D8D-6C700FA65FC9}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecipeChangeTracker.Firestore", "RecipeChangeTracker.Firestore\RecipeChangeTracker.Firestore.fsproj", "{1A5C6E93-FF00-40AE-B3DD-2940B4CA93F5}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecipeChangeTracker.CLI", "RecipeChangeTracker.CLI\RecipeChangeTracker.CLI.fsproj", "{64E67991-6846-4B33-BFCB-AF988CC8C83A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,6 +68,14 @@ Global
 		{E84D7F11-7EED-4E70-9D8D-6C700FA65FC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E84D7F11-7EED-4E70-9D8D-6C700FA65FC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E84D7F11-7EED-4E70-9D8D-6C700FA65FC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5C6E93-FF00-40AE-B3DD-2940B4CA93F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5C6E93-FF00-40AE-B3DD-2940B4CA93F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5C6E93-FF00-40AE-B3DD-2940B4CA93F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5C6E93-FF00-40AE-B3DD-2940B4CA93F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

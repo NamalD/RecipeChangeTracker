@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="serviceAccountKey.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Connection.fs" />
+    <Compile Include="Users.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FsFirestore" Version="1.1.4" />
+  </ItemGroup>
+
+</Project>
