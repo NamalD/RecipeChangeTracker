@@ -75,6 +75,6 @@ type RecipeChangeNode =
       Id: Guid
       PreviousId: Guid Option }
 
-type TrackedRecipeList = RecipeChangeNode list
+type TrackedRecipe = RecipeChangeNode list
 
-type RecipeStore = { Recipes: TrackedRecipeList list }
+type RecipeStore = { Recipes: TrackedRecipe list }

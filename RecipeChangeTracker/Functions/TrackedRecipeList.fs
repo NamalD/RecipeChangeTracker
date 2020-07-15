@@ -28,7 +28,7 @@ module TrackedRecipeList =
         | None -> None
         | Some previousId -> getNodeWithId list previousId
 
-    let rec getOrderedNodes (list:TrackedRecipeList) =
+    let rec getOrderedNodes (list:TrackedRecipe) =
         match list.Length with
         | 0 -> []
         | 1 -> [ list.Head ]
@@ -43,7 +43,7 @@ module TrackedRecipeList =
         getOrderedNodes list
         |> List.map (fun node -> node.Change)
 
-    let latest (list:TrackedRecipeList) =
+    let latest (list:TrackedRecipe) =
         getOrderedChanges list |> RecipeChange.toRecipe
 
     let rec getVersion node list =

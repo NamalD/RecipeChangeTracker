@@ -19,7 +19,7 @@ module RecipeStore =
 
     let getLatestRecipes store = List.map TrackedRecipeList.latest store.Recipes
 
-    let excludingRecipe recipeToExclude (recipes:TrackedRecipeList list) =
+    let excludingRecipe recipeToExclude (recipes:TrackedRecipe list) =
         let latestRecipeNameDoesNotMatch recipeList =
             let latest = TrackedRecipeList.latest recipeList
             latest.Name <> recipeToExclude

@@ -363,3 +363,6 @@ FodyWeavers.xsd
 
 # VS Code
 .vscode
+
+# Firebase Service Account Key
+**/serviceAccountKey.json
