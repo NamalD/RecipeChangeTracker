@@ -1,6 +1,7 @@
 namespace RecipeChangeTracker.Functions
 
 open RecipeChangeTracker.Types
+open System
 
 module Recipe =
 
@@ -9,3 +10,6 @@ module Recipe =
           Ingredients = ingredients
           Steps = steps
           CookTime = cooktime }
+
+    let createEmpty =
+        create ""  [] [] TimeSpan.Zero

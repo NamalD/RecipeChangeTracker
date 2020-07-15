@@ -15,7 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="RecipeList.fs" />
+    <Compile Include="RecipeChange.fs" />
+    <Compile Include="TrackedRecipeList.fs" />
     <Compile Include="RecipeStore.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>

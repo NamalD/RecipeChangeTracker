@@ -6,8 +6,9 @@
 
   <ItemGroup>
     <Compile Include="Types.fs" />
-    <Compile Include="Functions\TrackedRecipeList.fs" />
     <Compile Include="Functions\Recipe.fs" />
+    <Compile Include="Functions\RecipeChange.fs" />
+    <Compile Include="Functions\TrackedRecipeList.fs" />
     <Compile Include="Functions\RecipeStore.fs" />
   </ItemGroup>
 

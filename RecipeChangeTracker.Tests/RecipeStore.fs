@@ -1,19 +1,20 @@
-module RecipeChangeTracker.Tests.RecipeStoreTests
+namespace RecipeStore
 
 open NUnit.Framework
 open RecipeChangeTracker.Types
 open RecipeChangeTracker.Functions
 
-let ingredients =
-    [ Ingredient.Unitless
-        { Quantity = Quantity.Integer(1)
-          Name = "pineapple" } ]
+module TestData = 
+    let ingredients =
+        [ Ingredient.Unitless
+            { Quantity = Quantity.Integer(1)
+              Name = "pineapple" } ]
 
-let steps = [ "Peel"; "Eat" ]
-let timeToCook = System.TimeSpan.FromMinutes 20.0
+    let steps = [ "Peel"; "Eat" ]
+    let timeToCook = System.TimeSpan.FromMinutes 20.0
 
-let testRecipe =
-    Recipe.create "Test Recipe" ingredients steps timeToCook
+    let testRecipe =
+        Recipe.create "Test Recipe" ingredients steps timeToCook
 
 [<TestFixture>]
 type AddRecipe() =
@@ -22,12 +23,11 @@ type AddRecipe() =
     member this.``Add Recipe Updates Stored Recipes``() =
         let store = RecipeStore.create []
 
-        let updatedRecipeStore = RecipeStore.addRecipe testRecipe store
+        let updatedRecipeStore = RecipeStore.addRecipe TestData.testRecipe store
 
-        let latestRecipe =
-            TrackedRecipeList.latest updatedRecipeStore.Recipes.Head
+        let latestRecipe = TrackedRecipeList.latest updatedRecipeStore.Recipes.Head
 
-        Assert.That(latestRecipe, Is.EqualTo(testRecipe))
+        Assert.That(latestRecipe, Is.EqualTo(TestData.testRecipe))
 
 [<TestFixture>]
 type DeleteRecipe() =
@@ -42,7 +42,7 @@ type DeleteRecipe() =
 
     [<Test>]
     member this.``Delete non-existent recipe does nothing when a recipe exists``() =
-        let store = RecipeStore.createFromRecipe testRecipe
+        let store = RecipeStore.createFromRecipe TestData.testRecipe
 
         let updatedStore = RecipeStore.deleteRecipe store "foo"
 
@@ -51,20 +51,20 @@ type DeleteRecipe() =
     [<Test>]
     member this.``Delete existing recipe removes recipe``() =
         let expectedRecipe =
-            { testRecipe with
+            { TestData.testRecipe with
                   Name = "Another Recipe" }
 
         let expectedRecipes = [ expectedRecipe ]
 
         let store =
             RecipeStore.create []
-            |> RecipeStore.addRecipe testRecipe
+            |> RecipeStore.addRecipe TestData.testRecipe
             |> RecipeStore.addRecipe
-                { testRecipe with
+                { TestData.testRecipe with
                       Name = "Another Recipe" }
 
         let updatedRecipes =
-            RecipeStore.deleteRecipe store testRecipe.Name
+            RecipeStore.deleteRecipe store TestData.testRecipe.Name
             |> RecipeStore.getLatestRecipes
 
         Assert.That(updatedRecipes, Is.EqualTo(expectedRecipes))

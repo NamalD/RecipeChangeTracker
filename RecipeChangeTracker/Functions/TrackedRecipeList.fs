@@ -1,44 +1,52 @@
 namespace RecipeChangeTracker.Functions
 
 open RecipeChangeTracker.Types
-open System
 
 module TrackedRecipeList =
 
+    let headId list =
+        match list with
+        | [] -> None
+        | _ -> Some list.Head.Id
+
+    let applyChange change list =
+        let changeNode = headId list |> RecipeChange.toNode change
+        changeNode :: list
+
+    let foldChange list change =
+        applyChange change list
+
     let create recipe =
-        [ { Recipe = recipe
-            Id = Guid.NewGuid()
-            PreviousId = None } ]
+        let changes = RecipeChange.ofRecipe recipe
+        List.fold foldChange [] changes
 
-    let latest (tree:TrackedRecipeList) = tree.Head.Recipe
+    let getNodeWithId list id =
+        List.tryPick (fun node -> if node.Id = id then Some node else None) list
 
-    let getNodeWithId tree id =
-        List.tryPick (fun node -> if node.Id = id then Some node else None) tree
-
-    let getPreviousNode tree node =
+    let getPreviousNode node list =
         match node.PreviousId with
         | None -> None
-        | Some previousId -> getNodeWithId tree previousId
+        | Some previousId -> getNodeWithId list previousId
+
+    let rec getOrderedNodes (list:TrackedRecipeList) =
+        match list.Length with
+        | 0 -> []
+        | 1 -> [ list.Head ]
+        | 2 ->
+            let previous = getPreviousNode list.Head list
+            match previous with
+            | Some node -> node :: [ list.Head ]
+            | None -> []
+        | _ -> getOrderedNodes list.Tail @ [ list.Head ]
+
+    let getOrderedChanges list =
+        getOrderedNodes list
+        |> List.map (fun node -> node.Change)
+
+    let latest (list:TrackedRecipeList) =
+        getOrderedChanges list |> RecipeChange.toRecipe
 
     let rec getVersion node list =
-        match getPreviousNode list node with
+        match getPreviousNode node list with
         | None -> 1
         | Some previous -> 1 + (getVersion previous list)
-
-    let addToList recipe (list:TrackedRecipeList) =
-        let previousId =
-            match list with
-            | [] -> None
-            | _ -> Some list.Head.Id
-
-        let newHead =
-            { Recipe = recipe
-              Id = Guid.NewGuid()
-              PreviousId = previousId }
-
-        newHead :: list
-
-    let update newRecipe (list:TrackedRecipeList) =
-        match list.IsEmpty with
-        | true -> create newRecipe
-        | false -> addToList newRecipe list
