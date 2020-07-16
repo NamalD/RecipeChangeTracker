@@ -6,8 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Types.fs" />
-    <Compile Include="Firestore.fs" />
+    <Compile Include="Parser.fs" />
+    <Compile Include="CliTypes.fs" />
+    <Compile Include="Firestore\Handlers.fs" />
+    <Compile Include="Firestore\Router.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 

@@ -1,16 +1,14 @@
+<script>
+  import { getLatestRecipes } from "../Persistence/Recipes";
+  const recipes = getLatestRecipes();
+</script>
+
 <h2>Your recipes</h2>
 
 <ul>
-  <li>
-    <a href="#a">Recipe A</a>
-  </li>
-  <li>
-    <a href="#a">Recipe B</a>
-  </li>
-  <li>
-    <a href="#a">Recipe C</a>
-  </li>
-  <li>
-    <a href="#a">Recipe D</a>
-  </li>
+  {#each recipes as recipe}
+    <li>
+      <a href="#a">{recipe}</a>
+    </li>
+  {/each}
 </ul>

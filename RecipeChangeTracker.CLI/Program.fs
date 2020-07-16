@@ -1,7 +1,5 @@
-// Learn more about F# at http://fsharp.org
-
 open System
-open Types
+open CliTypes
 
 let toCommand (value:string) =
     match value.ToLower() with
@@ -25,7 +23,7 @@ let handle command args =
     | GetCommand -> GetNextCommand
     | Quit -> QuitApplication
     | Invalid -> Write "Invalid command"
-    | FireStore -> Firestore.handle args
+    | FireStore -> Firestore.Router.handle args
 
 let parseHandle () =
     let (command, args) = getCommand ()
