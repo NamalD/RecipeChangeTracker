@@ -1,6 +1,7 @@
 namespace RecipeChangeTracker.Firestore
 
 open FsFirestore.Firestore
+open System
 
 type FirestoreResponse<'a> =
     | Success of 'a
@@ -9,7 +10,8 @@ type FirestoreResponse<'a> =
 module Connection =
 
     let connect () =
-        connectToFirestore "serviceAccountKey.json"
+        Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS")
+        |> connectToFirestore 
 
     let withConnection callback =
         match connect() with

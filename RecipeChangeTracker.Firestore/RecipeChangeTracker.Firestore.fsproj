@@ -5,9 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="serviceAccountKey.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Compile Include="Connection.fs" />
     <Compile Include="RecipeStates.fs" />
     <Compile Include="Users.fs" />
