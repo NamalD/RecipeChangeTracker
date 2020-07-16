@@ -25,7 +25,7 @@ let handle command args =
     | GetCommand -> GetNextCommand
     | Quit -> QuitApplication
     | Invalid -> Write "Invalid command"
-    | FireStore -> FireStore.handle args
+    | FireStore -> Firestore.handle args
 
 let parseHandle () =
     let (command, args) = getCommand ()

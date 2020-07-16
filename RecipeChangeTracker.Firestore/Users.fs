@@ -15,7 +15,7 @@ module Users =
 
     let getUsers () =
         let getUsersOnConnect () =
-            allDocuments<User> "user"
+            allDocuments<User> "users"
 
         Connection.withConnection <| getUsersOnConnect 
 

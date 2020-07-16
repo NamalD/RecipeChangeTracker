@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <Compile Include="Types.fs" />
-    <Compile Include="FireStore.fs" />
+    <Compile Include="Firestore.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
