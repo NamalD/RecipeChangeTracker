@@ -8,27 +8,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeChangeTracker.CSharp.Models", "CSharp\RecipeChangeTracker.Models\RecipeChangeTracker.CSharp.Models.csproj", "{FDB64A14-29CC-42A4-9A44-8DA1ED0BAA83}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeChangeTracker.Models.Extensions", "CSharp\RecipeChangeTracker.Models.Extensions\RecipeChangeTracker.Models.Extensions.csproj", "{AAA34AA5-A13E-491D-99E4-71F2A85DC171}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeChangeTracker.API", "CSharp\RecipeChangeTracker.API\RecipeChangeTracker.API.csproj", "{DD0E3DCD-432E-48F6-886D-C4635C5DE0B9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeChangeTracker.RecipeStore.Core", "CSharp\RecipeChangeTracker.RecipeStore.Core\RecipeChangeTracker.RecipeStore.Core.csproj", "{A6FDB6BE-2565-4348-9DB9-1B4C4AEFAC73}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeChangeTracker.RecipeStore.InMemory", "CSharp\RecipeChangeTracker.RecipeStore.InMemory\RecipeChangeTracker.RecipeStore.InMemory.csproj", "{02468EE1-6DBD-43E4-88EA-463B6D737F23}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecipeChangeTracker.Tree", "CSharp\RecipeChangeTracker.Tree\RecipeChangeTracker.Tree.csproj", "{14F253E3-987C-4149-A2ED-A3CFE7E2D468}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{5909E26F-9039-4F7F-8BA9-D93AAE451208}"
-EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker", "RecipeChangeTracker\RecipeChangeTracker.fsproj", "{E83F23C0-74D2-43AF-B56F-EA8F1D6CCD13}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.Tests", "RecipeChangeTracker.Tests\RecipeChangeTracker.Tests.fsproj", "{E84D7F11-7EED-4E70-9D8D-6C700FA65FC9}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecipeChangeTracker.Firestore", "RecipeChangeTracker.Firestore\RecipeChangeTracker.Firestore.fsproj", "{1A5C6E93-FF00-40AE-B3DD-2940B4CA93F5}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.Firestore", "RecipeChangeTracker.Firestore\RecipeChangeTracker.Firestore.fsproj", "{1A5C6E93-FF00-40AE-B3DD-2940B4CA93F5}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "RecipeChangeTracker.CLI", "RecipeChangeTracker.CLI\RecipeChangeTracker.CLI.fsproj", "{64E67991-6846-4B33-BFCB-AF988CC8C83A}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.CLI", "RecipeChangeTracker.CLI\RecipeChangeTracker.CLI.fsproj", "{64E67991-6846-4B33-BFCB-AF988CC8C83A}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.API", "RecipeChangeTracker.API\RecipeChangeTracker.API.fsproj", "{B2425396-6F7D-475D-9047-0D7476B021F3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,30 +24,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FDB64A14-29CC-42A4-9A44-8DA1ED0BAA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDB64A14-29CC-42A4-9A44-8DA1ED0BAA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDB64A14-29CC-42A4-9A44-8DA1ED0BAA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDB64A14-29CC-42A4-9A44-8DA1ED0BAA83}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AAA34AA5-A13E-491D-99E4-71F2A85DC171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AAA34AA5-A13E-491D-99E4-71F2A85DC171}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AAA34AA5-A13E-491D-99E4-71F2A85DC171}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AAA34AA5-A13E-491D-99E4-71F2A85DC171}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD0E3DCD-432E-48F6-886D-C4635C5DE0B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD0E3DCD-432E-48F6-886D-C4635C5DE0B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD0E3DCD-432E-48F6-886D-C4635C5DE0B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD0E3DCD-432E-48F6-886D-C4635C5DE0B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A6FDB6BE-2565-4348-9DB9-1B4C4AEFAC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6FDB6BE-2565-4348-9DB9-1B4C4AEFAC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6FDB6BE-2565-4348-9DB9-1B4C4AEFAC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6FDB6BE-2565-4348-9DB9-1B4C4AEFAC73}.Release|Any CPU.Build.0 = Release|Any CPU
-		{02468EE1-6DBD-43E4-88EA-463B6D737F23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{02468EE1-6DBD-43E4-88EA-463B6D737F23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{02468EE1-6DBD-43E4-88EA-463B6D737F23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{02468EE1-6DBD-43E4-88EA-463B6D737F23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{14F253E3-987C-4149-A2ED-A3CFE7E2D468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14F253E3-987C-4149-A2ED-A3CFE7E2D468}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14F253E3-987C-4149-A2ED-A3CFE7E2D468}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14F253E3-987C-4149-A2ED-A3CFE7E2D468}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E83F23C0-74D2-43AF-B56F-EA8F1D6CCD13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E83F23C0-74D2-43AF-B56F-EA8F1D6CCD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E83F23C0-74D2-43AF-B56F-EA8F1D6CCD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -76,17 +40,13 @@ Global
 		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2425396-6F7D-475D-9047-0D7476B021F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2425396-6F7D-475D-9047-0D7476B021F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2425396-6F7D-475D-9047-0D7476B021F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2425396-6F7D-475D-9047-0D7476B021F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{FDB64A14-29CC-42A4-9A44-8DA1ED0BAA83} = {5909E26F-9039-4F7F-8BA9-D93AAE451208}
-		{AAA34AA5-A13E-491D-99E4-71F2A85DC171} = {5909E26F-9039-4F7F-8BA9-D93AAE451208}
-		{DD0E3DCD-432E-48F6-886D-C4635C5DE0B9} = {5909E26F-9039-4F7F-8BA9-D93AAE451208}
-		{A6FDB6BE-2565-4348-9DB9-1B4C4AEFAC73} = {5909E26F-9039-4F7F-8BA9-D93AAE451208}
-		{02468EE1-6DBD-43E4-88EA-463B6D737F23} = {5909E26F-9039-4F7F-8BA9-D93AAE451208}
-		{14F253E3-987C-4149-A2ED-A3CFE7E2D468} = {5909E26F-9039-4F7F-8BA9-D93AAE451208}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46A7C96B-4CC5-4645-A792-AAE6DBF73BE3}
