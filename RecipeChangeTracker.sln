@@ -16,6 +16,8 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.Firesto
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.CLI", "RecipeChangeTracker.CLI\RecipeChangeTracker.CLI.fsproj", "{64E67991-6846-4B33-BFCB-AF988CC8C83A}"
 EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.API", "RecipeChangeTracker.API\RecipeChangeTracker.API.fsproj", "{8A65AAF7-0E15-48C4-9BA8-5E994B81DFE7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64E67991-6846-4B33-BFCB-AF988CC8C83A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A65AAF7-0E15-48C4-9BA8-5E994B81DFE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A65AAF7-0E15-48C4-9BA8-5E994B81DFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A65AAF7-0E15-48C4-9BA8-5E994B81DFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A65AAF7-0E15-48C4-9BA8-5E994B81DFE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
