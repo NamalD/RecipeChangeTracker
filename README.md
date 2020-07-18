@@ -10,4 +10,4 @@ Source control for recipes using an immutable directed acyclic graph inspired by
 - .NET Core
 - F#
 - NUnit and FsCheck for testing
-- [Carter](https://github.com/CarterCommunity/Carter) for routing and OpenAPI integration
+- Giraffe for functional ASP.NET Core API
