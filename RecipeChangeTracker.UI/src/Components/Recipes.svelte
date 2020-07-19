@@ -1,5 +1,8 @@
 <script>
-  import { getLatestRecipes, getLatestRecipesAsync } from "../Persistence/Recipes";
+  import {
+    getLatestRecipes,
+    getLatestRecipesAsync,
+  } from "../Persistence/Recipes";
   import App from "../App.svelte";
   let recipesPromise = getLatestRecipesAsync();
 </script>
@@ -9,14 +12,13 @@
 <ul>
   {#await recipesPromise}
     <p>Loading recipes...</p>
-  {:then response}
-    <!-- {#each recipes as recipe}
+  {:then recipes}
+    {#each recipes as recipe}
       <li>
-        <a href="#a">{recipe}</a>
+        <a href="#a">{recipe.name}</a>
       </li>
-    {/each} -->
-    <p>{response}</p>
+    {/each}
   {:catch error}
-      <p>Couldn't load recipes :(</p>
+    <p>Couldn't load recipes :(</p>
   {/await}
 </ul>
