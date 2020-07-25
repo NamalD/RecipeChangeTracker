@@ -1,0 +1,3 @@
+[submodule "FsFirestore"]
+	path = FsFirestore
+	url = https://github.com/NamalD/FsFirestore.git
