@@ -50,6 +50,7 @@ let main _ =
     Host.CreateDefaultBuilder()
         .ConfigureWebHostDefaults(fun webHostBuilder ->
         webHostBuilder.UseContentRoot(contentRoot).UseWebRoot(webRoot)
+                      .UseUrls("http://0.0.0.0:5000/")
                       .Configure(Action<IApplicationBuilder> configureApp).ConfigureServices(configureServices)
                       .ConfigureLogging(configureLogging)
         |> ignore).Build().Run()
