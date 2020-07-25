@@ -14,10 +14,7 @@ open RecipeChangeTracker.API.Handlers
 let webApp =
     choose
         [ GET
-          >=> choose
-                  [ route "/recipes" >=> Recipes.getLatestHander
-                    route "/config"
-                    >=> json (Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS")) ]
+          >=> choose [ route "/recipes" >=> Recipes.getLatestHander ]
           setStatusCode 404 >=> text "Not Found" ]
 
 let errorHandler (ex: Exception) (logger: ILogger) =

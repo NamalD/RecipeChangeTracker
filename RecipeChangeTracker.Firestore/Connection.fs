@@ -10,10 +10,8 @@ type FirestoreResponse<'a> =
 module Connection =
 
     let connect () =
-        Environment.GetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS")
-        |> connectToFirestore 
+        connectToFirestoreProject "recipechangetracker"
 
     let withConnection callback =
-        match connect() with
-        | true -> Success <| callback ()
-        | false -> Failure
+        connect () |> ignore
+        callback ()

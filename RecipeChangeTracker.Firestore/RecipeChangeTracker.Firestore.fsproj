@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="FsFirestore" Version="1.1.4" />
+    <ProjectReference Include="..\FsFirestore\FsFirestore\FsFirestore.fsproj" />
   </ItemGroup>
 
 </Project>

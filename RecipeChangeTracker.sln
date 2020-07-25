@@ -18,6 +18,10 @@ Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.CLI", "
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "RecipeChangeTracker.API", "RecipeChangeTracker.API\RecipeChangeTracker.API.fsproj", "{8A65AAF7-0E15-48C4-9BA8-5E994B81DFE7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FsFirestore", "FsFirestore", "{DC6A907A-FB22-4AA9-8333-BF4DB04EE2E8}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FsFirestore", "FsFirestore\FsFirestore\FsFirestore.fsproj", "{0D453FD1-CCBA-42FC-8DC5-A5991EBE8117}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,11 +48,18 @@ Global
 		{8A65AAF7-0E15-48C4-9BA8-5E994B81DFE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A65AAF7-0E15-48C4-9BA8-5E994B81DFE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A65AAF7-0E15-48C4-9BA8-5E994B81DFE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D453FD1-CCBA-42FC-8DC5-A5991EBE8117}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D453FD1-CCBA-42FC-8DC5-A5991EBE8117}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D453FD1-CCBA-42FC-8DC5-A5991EBE8117}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D453FD1-CCBA-42FC-8DC5-A5991EBE8117}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46A7C96B-4CC5-4645-A792-AAE6DBF73BE3}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D453FD1-CCBA-42FC-8DC5-A5991EBE8117} = {DC6A907A-FB22-4AA9-8333-BF4DB04EE2E8}
 	EndGlobalSection
 EndGlobal
