@@ -47,10 +47,18 @@ let configureLogging (builder: ILoggingBuilder) =
 let main _ =
     let contentRoot = Directory.GetCurrentDirectory()
     let webRoot = Path.Combine(contentRoot, "WebRoot")
+
+    let portEnvVar =
+        Environment.GetEnvironmentVariable("PORT")
+
+    let port =
+        if isNull portEnvVar then "5000" else portEnvVar
+
+    let url = sprintf "%s:%s" "http://0.0.0.0" port
+
     Host.CreateDefaultBuilder()
         .ConfigureWebHostDefaults(fun webHostBuilder ->
-        webHostBuilder.UseContentRoot(contentRoot).UseWebRoot(webRoot)
-                      .UseUrls("http://0.0.0.0:5000/")
+        webHostBuilder.UseContentRoot(contentRoot).UseWebRoot(webRoot).UseUrls(url)
                       .Configure(Action<IApplicationBuilder> configureApp).ConfigureServices(configureServices)
                       .ConfigureLogging(configureLogging)
         |> ignore).Build().Run()
