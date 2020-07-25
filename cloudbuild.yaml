@@ -1,0 +1,28 @@
+steps:
+  # Build API container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - "build"
+      - "-t"
+      - "gcr.io/$PROJECT_ID/api:$COMMIT_SHA"
+      - "-f"
+      - "RecipeChangeTracker.API/Dockerfile"
+      - "."
+  # Push image to container registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/$PROJECT_ID/api:$COMMIT_SHA"]
+  # Deploy to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      - "run"
+      - "deploy"
+      - "recipe-change-tracker-api"
+      - "--image"
+      - "gcr.io/$PROJECT_ID/api:$COMMIT_SHA"
+      - "--region"
+      - "europe-west1"
+      - "--platform"
+      - "managed"
+images:
+  - "gcr.io/$PROJECT_ID/api:$COMMIT_SHA"
