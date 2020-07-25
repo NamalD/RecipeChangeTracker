@@ -4,9 +4,8 @@ open RecipeChangeTracker.Firestore
 open CliTypes
 
 let connect () =
-    let projectId = Connection.connect ()
-    sprintf "Connected to project %s" projectId
-    |> Write
+    Connection.connect ()
+    Write <| sprintf "Connected to project" 
 
 let handleFirestoreResponse map data = Write <| sprintf "%A" (map data)
 

@@ -1,7 +1,6 @@
 namespace RecipeChangeTracker.Firestore
 
 open FsFirestore.Firestore
-open System
 
 type FirestoreResponse<'a> =
     | Success of 'a
